@@ -1,0 +1,73 @@
+Modes in Router/switches
+===============
+user mode
+enable/privelege mode
+configure mode
+
+To check the interface update:
+show ip interface brief  #Run for usermode
+
+shortcut commands
+ctl+a = begining of the line
+ctl+e = EOL
+ctl+w = delete a word
+ctl+x = delete the line.
+
+Task_1
+configure the interfaces,
+from enabled mode:-
+sh interface
+sh interface status
+sh interface stats
+sh ip interface brief
+
+enable the interface
+from config
+int 0/0
+no shutdown
+
+cdp - check the connected routers info
+sh cdp neighbours
+
+IOS Security
+========
+do show run | begin line con 0 #output will be need to be modifed
+R1(config)#line console 0
+R1(config-line)#exec-timeout 2
+R1(config-line)#no privilege level 15
+R1(config-line)#password cisco
+R1(config-line)#login
+R1(config-line)#exit
+
+do show run | begin line vty 0 4
+R1(config)#line vty 0 4
+R1(config-line)#password cisco
+
+Hash password
+
+conf-t#
+enable secret cisco
+service password-encryption
+conf-t#exit
+#R1 wr or R1#copy running-config startup-config
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
